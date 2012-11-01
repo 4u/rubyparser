@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Parser</title>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="style.css" charset="utf-8">
+	<script src="hashparser.js"></script>
+</head>
+<body>
+	<script>
+		$.get('gistfile.txt', function(data) {
+			var hashParser = new HashParser(data, {
+				showArrayItemNumber: true,
+				hasToggle: true,
+				hasPanel: true,
+				hasRaw: true
+			});
+			$(hashParser.getDocumentFragment()).appendTo(document.body);
+		});
+	</script>
+</body>
+</html>

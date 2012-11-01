@@ -1,0 +1,119 @@
+.hashparser {
+  color: #000;
+  font-size: 14px;
+  font-family: monospace;
+  padding-left: 1.6em;
+}
+
+.hashparser-panel {
+  margin-bottom: .5em;
+}
+.hashparser-panel-item {
+  background: #ddd;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 5px;
+  margin-right: .5em;
+}
+
+.hashparser-panel-separator {
+  display: inline-block;
+  width: .7em;
+}
+
+.hashparser-raw {
+  display: none;
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+.hashparser-mode-raw .hashparser-panel-raw {
+  background: #333;
+  color: #ddd;
+}
+
+.hashparser-mode-raw .hashparser-panel-minus,
+.hashparser-mode-raw .hashparser-panel-plus,
+.hashparser-mode-raw .hashparser-json {
+  display: none
+}
+
+.hashparser-mode-raw .hashparser-raw {
+  display: block;
+}
+
+
+.hashparser-type-number {
+  color: #009;
+}
+
+.hashparser i {
+  display: inline-block;
+  width: 2em;
+}
+
+.hashparser-type-string,
+.hashparser-type-string a {
+  color: #090;
+}
+
+.hashparser-type-null,
+.hashparser-type-undefined {
+  color: #909;
+}
+
+.hashparser-type-bolean {
+  color: #900;
+}
+
+.hashparser-type-object-item,
+.hashparser-type-array-item {
+  margin-left: .4em;
+  padding: 2px 0 2px 1.6em;
+  position: relative;
+  border-left: dotted 1px #ccc;
+}
+
+.hashparser-primitive {
+  font-weight: bold;
+}
+
+.hashparser-type-object-before,
+.hashparser-type-array-before {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.hashparser-type-object-after,
+.hashparser-type-array-after {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.hashparser-type-array-item-number {
+  color: #aaa;
+  font-size: 10px;
+  line-height: 1.4;
+  margin-left: -.3em;
+}
+
+.hashparser-toggle {
+  color: #999;
+  cursor: pointer;
+  font-size: 10px;
+  left: 1em;
+  line-height: 1.2;
+  margin-top: .2em;
+  position: absolute;
+}
+
+.hashparser-toggle-plus {
+  margin-top: .6em;
+}
+
+.hashparser-toggle-hidden {
+  display: none;
+}
