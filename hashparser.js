@@ -53,7 +53,7 @@ var HashParser = (function() {
     rawData = rawData.replace(/(({|,)\s*".+?"\s*)(\=\>)/g, "$1:");
     // TODO(max@rururu.me): fuckin JSON.parse won't parse my string!
     // return jQuery.parseJSON(rawData);
-    return eval(rawData);
+    return eval('(function(){ var nil = null; return ' + rawData + '})()');
   };
 
   HashParser.prototype.get = function() {
@@ -139,6 +139,10 @@ var HashParser = (function() {
       case "null":
       case "undefined":
         return true;
+    }
+
+    if (val === null) {
+      return true;
     }
 
     return false;
